@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Uperson - Teste de Personalidade</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+		<h1> 5 pilares da personalidade </h1>
+		
+		<div class="textContent">
+			<p>Esses traços de personalidade são fundamentais para compreender o comportamento e as tendências individuais. Vou detalhar um pouco mais cada um deles para você: </p>
+		
+			<ol>
+				<li> <strong>Extrovertido:</strong> Extrovertidos são energizados pelo contato social e frequentemente buscam novas experiências. Eles tendem a ser sociáveis, assertivos e a se sentir confortáveis em grandes grupos ou em situações de alta interação. A interação social é uma fonte importante de energia para eles. </li>
+				<li> <strong>Introvertido:</strong> Introvertidos, por outro lado, encontram energia na solidão e podem preferir interações mais profundas e significativas com um número menor de pessoas. Eles podem se sentir sobrecarregados por grandes grupos e, muitas vezes, precisam de tempo sozinhos para recarregar as energias.</li>
+				<li> <strong> Amabilidade:</strong> Este traço reflete a capacidade de ser atencioso, cooperativo e compreensivo com os outros. Indivíduos com alta amabilidade são geralmente gentis e preocupados com o bem-estar alheio. Em contrapartida, aqueles com baixa amabilidade podem ser mais assertivos e menos preocupados com a harmonia social, sendo mais propensos a conflitos. </li>
+				<li> <strong>Conscienciosidade:</strong> Pessoas com alta conscienciosidade são organizadas, responsáveis e têm uma forte orientação para alcançar metas. Elas tendem a ser meticulosas e a prestar atenção aos detalhes, o que pode levar a uma maior eficácia em suas tarefas e responsabilidades. Pessoas com baixa conscienciosidade podem ser mais desorganizadas e impulsivas, preferindo improvisar em vez de seguir um plano. </li>
+				<li> <strong>Neuroticismo:</strong> Este traço se refere à propensão a experimentar emoções negativas como ansiedade, raiva e tristeza. Indivíduos com alto neuroticismo podem ter dificuldades em lidar com estresse e podem ser mais propensos a experiências emocionais intensas. Aqueles com baixo neuroticismo tendem a ser mais calmos e estáveis emocionalmente.</li>
+			</ol>
+			
+			<p> E aí, vamos descobir sua personalidade? </p>
+			<p> Esteja ciente que este teste de personalidade trás um resultado generalizado, para ter um diagnótico assertivo é necessário ter um acompanhamento com um especialista </p>
+		</div>
+		<br/>
+        <h2>Teste de Personalidade</h2>
+        <form id="personalityForm">
+            <!-- Extroversão -->
+            <fieldset>
+                <legend>Extroversão</legend>
+                <label for="q1">1. Eu me sinto energizado(a) ao estar em grandes grupos de pessoas.</label>
+                <input type="number" id="q1" name="extroversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q2">2. Gosto de estar no centro das atenções em eventos sociais.</label>
+                <input type="number" id="q2" name="extroversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q3">3. Procuro ativamente novas oportunidades para socializar e conhecer pessoas.</label>
+                <input type="number" id="q3" name="extroversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q4">4. Eu frequentemente busco interações sociais como uma forma de entretenimento.</label>
+                <input type="number" id="q4" name="extroversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q5">5. Sinto-me confortável e animado(a) em ambientes sociais movimentados.</label>
+                <input type="number" id="q5" name="extroversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+            </fieldset>
+
+            <!-- Introversão -->
+            <fieldset>
+                <legend>Introversão</legend>
+                <label for="q6">6. Prefiro passar tempo sozinho(a) do que em grandes grupos sociais.</label>
+                <input type="number" id="q6" name="introversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q7">7. Eu me sinto mais relaxado(a) quando tenho algum tempo para mim mesmo(a).</label>
+                <input type="number" id="q7" name="introversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q8">8. Eu valorizo mais conversas profundas e significativas do que interações superficiais.</label>
+                <input type="number" id="q8" name="introversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q9">9. Gosto de ter um tempo tranquilo para refletir e relaxar após eventos sociais.</label>
+                <input type="number" id="q9" name="introversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q10">10. Interações sociais prolongadas frequentemente me deixam cansado(a).</label>
+                <input type="number" id="q10" name="introversao" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+            </fieldset>
+
+            <!-- Amabilidade -->
+            <fieldset>
+                <legend>Amabilidade</legend>
+                <label for="q11">11. Eu frequentemente me esforço para entender e apoiar os sentimentos dos outros.</label>
+                <input type="number" id="q11" name="amabilidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q12">12. Tento evitar conflitos e faço o possível para manter a harmonia nas minhas relações.</label>
+                <input type="number" id="q12" name="amabilidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q13">13. Eu me sinto confortável em ajudar os outros, mesmo que isso me exija algum sacrifício pessoal.</label>
+                <input type="number" id="q13" name="amabilidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q14">14. Eu sou paciente e compreensivo(a) quando outras pessoas cometem erros.</label>
+                <input type="number" id="q14" name="amabilidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q15">15. Eu me preocupo genuinamente com o bem-estar das pessoas ao meu redor.</label>
+                <input type="number" id="q15" name="amabilidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+            </fieldset>
+
+            <!-- Conscienciosidade -->
+            <fieldset>
+                <legend>Conscienciosidade</legend>
+                <label for="q16">16. Eu planejo e organizo minhas atividades com antecedência.</label>
+                <input type="number" id="q16" name="conscienciosidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q17">17. Eu sou cuidadoso(a) e meticuloso(a) ao completar tarefas e cumprir responsabilidades.</label>
+                <input type="number" id="q17" name="conscienciosidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q18">18. Eu costumo seguir uma rotina organizada e manter um ambiente de trabalho arrumado.</label>
+                <input type="number" id="q18" name="conscienciosidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q19">19. Eu prefiro ter um plano claro e detalhado antes de iniciar um projeto.</label>
+                <input type="number" id="q19" name="conscienciosidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q20">20. Eu tento evitar procrastinação e mantenho um alto padrão em minhas atividades.</label>
+                <input type="number" id="q20" name="conscienciosidade" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+            </fieldset>
+
+            <!-- Neuroticismo -->
+            <fieldset>
+                <legend>Neuroticismo</legend>
+                <label for="q21">21. Eu frequentemente me sinto ansioso(a) ou preocupado(a) com possíveis problemas.</label>
+                <input type="number" id="q21" name="neuroticismo" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q22">22. Eu tenho dificuldade em lidar com situações estressantes sem me sentir sobrecarregado(a).</label>
+                <input type="number" id="q22" name="neuroticismo" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q23">23. Eu me preocupo excessivamente com o que os outros pensam de mim.</label>
+                <input type="number" id="q23" name="neuroticismo" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q24">24. Eu tenho mudanças de humor frequentes e intensas.</label>
+                <input type="number" id="q24" name="neuroticismo" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+                <label for="q25">25. Eu me sinto frequentemente irritado(a) ou frustrado(a) com pequenos contratempos.</label>
+                <input type="number" id="q25" name="neuroticismo" min="1" max="5" required> <span> (1 - Discordo totalmente, 5 - Concordo totalmente) </span>
+            </fieldset>
+
+            <button type="button" onclick="calculateResults()">Calcular Resultados</button>
+        </form>
+
+        <div id="results" class="results">
+            <!-- Resultados serão exibidos aqui -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

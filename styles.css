@@ -1,0 +1,94 @@
+/* Define a fonte padrão para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estiliza o contêiner principal */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Centraliza o título principal */
+h1, h2{
+    text-align: center;
+    color: #333;
+}
+
+/* Ajusta o texto que explica sobre os pilares da personalidade*/
+.textContent{
+	hyphens: auto;
+	text-align:justify;
+	line-height:1.5;
+	margin:20px;
+}
+/* Define o espaçamento entre um item de lista para outro na lista ordenada */
+.textContent li{
+	margin-bottom:5px;
+}
+
+span{
+	font-size:12px;
+}
+
+/* Estiliza os campos de conjunto de perguntas */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estiliza a legenda do conjunto de perguntas */
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Estiliza as etiquetas das perguntas */
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Estiliza os campos de entrada numérica */
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Estiliza o botão de envio */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+/* Efeito de hover para o botão */
+button:hover {
+    background-color: #218838;
+}
+
+/* Estiliza a área onde os resultados serão exibidos */
+.results {
+    margin-top: 20px;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+}
